@@ -1,0 +1,61 @@
+.example-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+  margin-bottom: -30px;
+}
+.example-element {
+  width: calc((100% - 90px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #eeeeee;
+}
+.example-link {
+  display: block;
+
+&:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+}
+.example-content {
+  padding: 20px 24px;
+}
+.example {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.example-activity {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.relative {
+  position: relative;
+  overflow: hidden;
+}
+.relative-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 63px 24px;
+
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+
+  background-color: var(--btn-main-bg);
+  color: var(--icon-secondary-cl);
+
+  transition-property: transform;
+  transform: translateY(101%);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.example-link:hover .relative-content {
+  transform: translateY(0);
+}

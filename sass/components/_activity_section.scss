@@ -1,0 +1,25 @@
+.activity {
+  padding-top: 0;
+}
+.activity_list {
+  display: flex;
+  justify-content: center;
+}
+.activity_cards + .activity_cards {
+  margin-left: 30px;
+}
+
+.activity_cards {
+  position: relative;
+}
+
+.activity_items {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  text-align: center;
+  width: 100%;
+  padding: 27px 10px;
+  color: var(--icon-secondary-cl);
+  background-color: rgba(47, 48, 58, 0.8);
+}

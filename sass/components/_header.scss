@@ -1,7 +1,226 @@
 .header {
   border-bottom: 1px solid #ececec;
 }
+
 .header-container {
   display: flex;
   align-items: center;
+}
+
+.header-logo {
+  margin-right: 93px;
+  color: var(--h-clr);
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+
+  & .header-logo-first {
+    color: var(--accent);
+  }
+  & .header-logo-second {
+    color: var(--main-bcgclr);
+  }
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav-item + .header-nav-item {
+  margin-left: 50px;
+}
+
+.header-nav-link {
+  position: relative;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: currentColor;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+
+  &:hover,
+  &:focus {
+    color: var(--accent);
+
+    &::after {
+      width: 100%;
+      transform: scale(1);
+    }
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    height: 5px;
+    background-color: var(--accent);
+    border-radius: 5px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: scale(0);
+
+    transition: transform 400ms linear;
+  }
+}
+
+.current {
+  color: var(--accent);
+
+  &::after {
+    transform: scale(1);
+  }
+}
+
+.header-feedback {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header-feedback-contacts + .header-feedback-contacts {
+  margin-left: 50px;
+}
+
+.header-feedback-link {
+  display: flex;
+  align-items: center;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  transition: transform;
+
+  color: currentColor;
+
+  & :hover,
+  & :focus {
+    color: var(--accent);
+    transform: scale(1.2);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.header-feedback-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.header-feedback-link:hover .header-feedback-icon,
+.header-feedback-link:focus .header-feedback-icon {
+  fill: var(--accent);
+}
+.header-logo {
+  margin-right: 93px;
+  color: var(--h-clr);
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+}
+.header-logo .header-logo-first {
+  color: var(--accent);
+}
+.header-logo .header-logo-second {
+  color: var(--main-bcgclr);
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+.header-nav-item + .header-nav-item {
+  margin-left: 50px;
+}
+.header-nav-link {
+  position: relative;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: currentColor;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  &:hover,
+  &:focus {
+    color: var(--accent);
+  }
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    height: 5px;
+    background-color: var(--accent);
+    border-radius: 5px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: scale(0);
+    transition: transform 400ms linear;
+
+    &:hover::after,
+    &:focus::after {
+      transform: scale(1);
+    }
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+.current {
+  color: var(--accent);
+
+  &::after {
+    transform: scale(1);
+  }
+}
+.header-feedback {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.header-feedback-contacts + .header-feedback-contacts {
+  margin-left: 50px;
+}
+.header-feedback-link {
+  display: flex;
+  align-items: center;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  transition: transform;
+
+  color: currentColor;
+
+  & :hover,
+  & :focus {
+    color: var(--accent);
+    transform: scale(1.2);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.header-feedback-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+.header-feedback-link:hover .header-feedback-icon,
+.header-feedback-link:focus .header-feedback-icon {
+  fill: var(--accent);
 }

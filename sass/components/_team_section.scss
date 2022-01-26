@@ -1,38 +1,42 @@
 .team {
   background-color: var(--activity-section);
 }
+
 .team-list {
   display: flex;
   justify-content: center;
   margin: 0px;
 }
+
 .team-cards {
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 3px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
 
-    &:not(:last-child) {
-  margin-right: 30px;
-
-  &:last-child {
-  margin: 0px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
+
 .team-links-icons {
   width: 20px;
   height: 20px;
   fill: var(--icon-main-cl);
   transition: transform;
-}
-&:not(:last-child) {
-  margin-right: 10px;
 
-&:hover,
-&:focus {
-  fill: #ffffff;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+  &:hover,
+  &:focus {
+    fill: #ffffff;
+  }
 }
+
 .team-wrap {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
 .team-cards-stuff {
   font-weight: 500;
   font-size: 16px;
@@ -40,6 +44,7 @@
   text-align: center;
   margin-bottom: 10px;
 }
+
 .team-stuff-position {
   text-align: center;
   font-weight: 400;
@@ -47,14 +52,19 @@
   line-height: 1.9;
   margin-bottom: 16px;
 }
+
 .socials-list {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.socials-item + .socials-item {
-  margin-left: 10px;
+
+.socials-item {
+  &:not(:last-child) {
+    margin-left: 10px;
+  }
 }
+
 .socials-link {
   display: flex;
   align-items: center;
@@ -66,17 +76,20 @@
 
   transition: background-color var(--transition-property), transform;
 
-&:hover,
-&:focus {
-  background-color: var(--accent);
-  transform: scale(1.2);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: var(--accent);
+    transform: scale(1.2);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
+
 .socials-icon {
   fill: var(--icon-main-cl);
   transition: fill var(--transition-property);
 }
+
 .socials-link:hover .socials-icon,
 .socials-link:focus .socials-icon {
   fill: var(--main-bcgclr);

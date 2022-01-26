@@ -59,3 +59,42 @@
 .example-link:hover .relative-content {
   transform: translateY(0);
 }
+.tools-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.tools-item + .tools-item {
+  margin-left: 8px;
+}
+.tools-button {
+  min-width: 73px;
+  padding: 6px 22px;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--h-clr);
+
+  background-color: var(--btn-secondary-bg);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  
+  &:hover,
+  &:focus {
+  color: var(--main-bcgclr);
+  background-color: var(--accent);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: scale(1.2);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+& .current {
+  color: var(--main-bcgclr);
+  background-color: var(--accent);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+}

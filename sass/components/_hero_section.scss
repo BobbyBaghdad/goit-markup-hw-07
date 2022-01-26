@@ -24,6 +24,7 @@
   text-transform: uppercase;
   text-align: center;
 }
+
 .hero-button {
   display: block;
   min-width: 200px;
@@ -42,9 +43,10 @@
   border: 1px solid transparent;
   border-radius: 4px;
   cursor: pointer;
-&:hover,
-&:focus {
-  transform: scale(1.2);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
